@@ -3,6 +3,8 @@ source /usr/share/cachyos-fish-config/cachyos-config.fish
 zoxide init fish | source
 source (/usr/bin/starship init fish --print-full-init | psub)
 
+functions --erase ls ll
+
 function ls --wraps=eza
     eza --icons --group-directories-first -1  $argv
 end
